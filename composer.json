@@ -1,0 +1,11 @@
+{
+    "name": "vmdeloper/oop",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "require": {
+        "illuminate/support": "^5.6"
+    }
+}
