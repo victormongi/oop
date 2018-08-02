@@ -6,14 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
-  <div id="app" class="container">
-    <div class="columns">
+  <div id="app" class="container" style="margin-top: 20px;">
+    <div v-cloak class="columns">
       <div class="column">
-        <input v-model="sort" class="input is-rounded" type="text" placeholder="Rounded input">
+        <div class="field">
+          <div class="control">
+            <input v-model="sort"class="input" type="text" placeholder="Small input">
+          </div>
+        </div>
         <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
           <thead>
             <tr>
@@ -23,6 +31,10 @@
               <th>
                 Price
               </th>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <th>{{ totalCostPantsjAndWallets }}</th>
             </tr>
           </thead>
           <tbody>
